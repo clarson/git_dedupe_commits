@@ -11,12 +11,11 @@
         
 ### DESCRIPTION
 
-    Fixes the problem of mixing merges and rebases on team projects.
+    Fixes duplicate commits when mixing merges and rebases on team branches.
 
 ### Options
 	-l, --loosen
         Loosen the commit matching.  Can specify multiple times to make it more forgiving on matches.  Useful when commit messages don't match due to edits during rebasing.
-        [ Bad Branch/tag/commit ]
 
     --ca, --common-ansestor (Default)
         Use merge-base to determine common ansestor. Speeds up finding missing/duplicate commits, but slightly possible to miss commits.
@@ -50,3 +49,8 @@
 
     --no-pt, --no-preserve-tmp (Default)
         Deletes temporary directory.
+
+### Usage
+
+    1) Create a clean branch based on the base/team branch
+    2) Run git_fix_merge_rebase.sh
