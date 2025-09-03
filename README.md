@@ -1,17 +1,17 @@
 ### NAME
 
-    git_fix_merge_rebase.sh
+    git_dedupe_commits.sh
 
 ### SYNOPSIS
 
-    git_fix_merge_rebase.sh [ -l | --loosen ]
+    git_dedupe_commits.sh [ -l | --loosen ]
         [ --ca | --common-ansestor ] [ -d | --delim ] 
         [ --dr | --dry-run ] [ -v | --verbose ]
         [ -p | --progress ] [ --pt | --preserve-tmp ] <Bad Branch/Tag/commit>
-        
+
 ### DESCRIPTION
 
-    Fixes duplicate commits when mixing merges and rebases on team branches.
+    Removes duplicate commits on a branch.
 
 ### Options
 	-l, --loosen
@@ -19,7 +19,7 @@
 
     --ca, --common-ansestor (Default)
         Use merge-base to determine common ansestor. Speeds up finding missing/duplicate commits, but slightly possible to miss commits.
-    
+
     ---no-ca, --no-common-ansestor
         Disables common-ansestor. Slower, but possibly more accurate.
 
@@ -37,7 +37,7 @@
 
     --no-verbose (Default)
         Disable verbose output.
-        
+
     -p, --progress (Default)
         Progress output.
 
@@ -53,4 +53,4 @@
 ### Usage
 
     1) Create a clean branch based on the base/team branch
-    2) Run git_fix_merge_rebase.sh
+    2) Run git_dedupe_commits.sh <Bad branch/Tag/Commit>
