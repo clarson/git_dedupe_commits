@@ -15,10 +15,13 @@
 
 ### Options
 	-l, --loosen
-        Loosen the commit matching.  Can specify multiple times to make it more forgiving on matches.  Useful when commit messages don't match due to edits during rebasing.
+        Loosen the commit matching. Can specify multiple times to make
+        it more forgiving on matches. Useful when commit messages don't
+        match due to edits during rebasing.
 
     --ca, --common-ansestor (Default)
-        Use merge-base to determine common ansestor. Speeds up finding missing/duplicate commits, but slightly possible to miss commits.
+        Use merge-base to determine common ansestor. Speeds up finding
+        duplicate commits, but slightly possible to miss commits.
 
     ---no-ca, --no-common-ansestor
         Disables common-ansestor. Slower, but possibly more accurate.
@@ -27,7 +30,8 @@
         Change delimiter. Must be a printable character.
 
     --dr, --dry-run
-        Dry run.  Emits the cherry-pick command to be run, and does NOT run the command.
+        Dry run.  Emits the cherry-pick command to be run, and does NOT
+        run the command.
 
     --no-dr, --no-dry-run (Default)
         Does the run.
